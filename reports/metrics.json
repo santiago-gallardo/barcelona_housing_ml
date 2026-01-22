@@ -1,0 +1,246 @@
+{
+  "data_path": "data\\raw\\Barcelona_2018.csv",
+  "basic_checks": {
+    "rows": 61486,
+    "cols": 46,
+    "duplicates": 0,
+    "missing_target": 0,
+    "target_min": 37000.0,
+    "target_max": 4866000.0
+  },
+  "run_metadata": {
+    "timestamp_utc": "2026-01-22T21:22:49.997843+00:00",
+    "python": "3.13.3",
+    "numpy": "2.4.0",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.0",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "split": {
+    "seed": 42,
+    "test_size": 0.2,
+    "final_n_train": 49188,
+    "final_n_test": 12298
+  },
+  "cv": {
+    "enabled": true,
+    "folds": 5,
+    "note": "CV is run on the TRAIN split only (robustness check).",
+    "summary_rows": [
+      {
+        "Model": "RandomForest (10 vars)",
+        "n_features": 10,
+        "rows_used_train": 49188,
+        "folds": 5,
+        "RMSE_mean": 78720.497,
+        "RMSE_std": 2365.13,
+        "MAE_mean": 45634.3,
+        "MAE_std": 734.828,
+        "R2_mean": 0.92,
+        "R2_std": 0.005
+      },
+      {
+        "Model": "RandomForest (5 vars) + log(y)",
+        "n_features": 5,
+        "rows_used_train": 49188,
+        "folds": 5,
+        "RMSE_mean": 84377.063,
+        "RMSE_std": 1828.912,
+        "MAE_mean": 49490.756,
+        "MAE_std": 620.403,
+        "R2_mean": 0.909,
+        "R2_std": 0.004
+      },
+      {
+        "Model": "LR (area)",
+        "n_features": 1,
+        "rows_used_train": 49188,
+        "folds": 5,
+        "RMSE_mean": 134684.951,
+        "RMSE_std": 2855.998,
+        "MAE_mean": 91832.372,
+        "MAE_std": 641.069,
+        "R2_mean": 0.767,
+        "R2_std": 0.011
+      },
+      {
+        "Model": "DecisionTree (2 vars, depth=2)",
+        "n_features": 2,
+        "rows_used_train": 49188,
+        "folds": 5,
+        "RMSE_mean": 157806.087,
+        "RMSE_std": 1623.618,
+        "MAE_mean": 109810.907,
+        "MAE_std": 205.59,
+        "R2_mean": 0.68,
+        "R2_std": 0.011
+      },
+      {
+        "Model": "Benchmark Dummy (median)",
+        "n_features": 1,
+        "rows_used_train": 49188,
+        "folds": 5,
+        "RMSE_mean": 287784.467,
+        "RMSE_std": 3328.143,
+        "MAE_mean": 171624.978,
+        "MAE_std": 2217.142,
+        "R2_mean": -0.063,
+        "R2_std": 0.005
+      }
+    ],
+    "best_by_rmse_mean_row": {
+      "Model": "RandomForest (10 vars)",
+      "n_features": 10,
+      "rows_used_train": 49188,
+      "folds": 5,
+      "RMSE_mean": 78720.497,
+      "RMSE_std": 2365.13,
+      "MAE_mean": 45634.3,
+      "MAE_std": 734.828,
+      "R2_mean": 0.92,
+      "R2_std": 0.005
+    },
+    "final_vs_best": {
+      "final_rmse_mean": 84377.063,
+      "best_rmse_mean": 78720.497,
+      "delta_rmse_mean": 5656.567,
+      "delta_pct": 7.19
+    }
+  },
+  "best_by_rmse": "RandomForest (10 vars)",
+  "best_by_rmse_row": {
+    "Model": "RandomForest (10 vars)",
+    "n_features": 10,
+    "RMSE": 78123.72286317842,
+    "MAE": 44343.30243837088,
+    "R2": 0.9278704739073919,
+    "rows_in": 61486,
+    "rows_used": 61486,
+    "dropped_missing": 0,
+    "n_train": 49188,
+    "n_test": 12298
+  },
+  "final_model_selected": "RandomForest (5 vars) + log(y)",
+  "final_row": {
+    "Model": "RandomForest (5 vars) + log(y)",
+    "n_features": 5,
+    "RMSE": 82805.37244149209,
+    "MAE": 47838.186407745925,
+    "R2": 0.9189665653584655,
+    "rows_in": 61486,
+    "rows_used": 61486,
+    "dropped_missing": 0,
+    "n_train": 49188,
+    "n_test": 12298
+  },
+  "selection_reason": "parsimony (simpler model with comparable performance)",
+  "delta_final_vs_best": {
+    "rmse_abs": 4681.649578313663,
+    "rmse_pct": 0.05992609423533035,
+    "r2_abs": -0.00890390854892631
+  },
+  "models": [
+    {
+      "Model": "RandomForest (10 vars)",
+      "n_features": 10,
+      "RMSE": 78123.72286317842,
+      "MAE": 44343.30243837088,
+      "R2": 0.9278704739073919,
+      "rows_in": 61486,
+      "rows_used": 61486,
+      "dropped_missing": 0,
+      "n_train": 49188,
+      "n_test": 12298
+    },
+    {
+      "Model": "RandomForest (5 vars) + log(y)",
+      "n_features": 5,
+      "RMSE": 82805.37244149209,
+      "MAE": 47838.186407745925,
+      "R2": 0.9189665653584655,
+      "rows_in": 61486,
+      "rows_used": 61486,
+      "dropped_missing": 0,
+      "n_train": 49188,
+      "n_test": 12298
+    },
+    {
+      "Model": "LR (area)",
+      "n_features": 1,
+      "RMSE": 136250.91042546378,
+      "MAE": 92747.06465597339,
+      "R2": 0.7806053448675447,
+      "rows_in": 61486,
+      "rows_used": 61486,
+      "dropped_missing": 0,
+      "n_train": 49188,
+      "n_test": 12298
+    },
+    {
+      "Model": "DecisionTree (2 vars, depth=2)",
+      "n_features": 2,
+      "RMSE": 164244.91615958765,
+      "MAE": 110684.41596042368,
+      "R2": 0.6811906212973682,
+      "rows_in": 61486,
+      "rows_used": 61486,
+      "dropped_missing": 0,
+      "n_train": 49188,
+      "n_test": 12298
+    },
+    {
+      "Model": "Benchmark Dummy (median)",
+      "n_features": 1,
+      "RMSE": 300699.2037568819,
+      "MAE": 174409.74142136934,
+      "R2": -0.06859164325417821,
+      "rows_in": 61486,
+      "rows_used": 61486,
+      "dropped_missing": 0,
+      "n_train": 49188,
+      "n_test": 12298
+    }
+  ],
+  "final_model_details": {
+    "model_name": "RandomForest (5 vars) + log(y)",
+    "features": [
+      "CONSTRUCTEDAREA",
+      "LATITUDE",
+      "LONGITUDE",
+      "DISTANCE_TO_CITY_CENTER",
+      "DISTANCE_TO_DIAGONAL"
+    ],
+    "n_features": 5,
+    "estimator_class": "RandomForestRegressor",
+    "params_summary": {
+      "wrapper": "TransformedTargetRegressor",
+      "target_transform": "log1p/expm1",
+      "estimator": "RandomForestRegressor",
+      "params": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_split": 3,
+        "min_samples_leaf": 1,
+        "max_features": 1.0,
+        "bootstrap": true,
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    }
+  },
+  "final_error_stats": {
+    "abs_error_mean": 47838.186407745925,
+    "abs_error_median": 28236.670579042344,
+    "abs_error_p90": 110363.07389864724,
+    "abs_error_p95": 157724.4470749646
+  },
+  "reports": {
+    "comparison_csv": "reports\\model_comparison.csv",
+    "figures_dir": "reports\\figures",
+    "cv_summary_csv": "reports\\cv_summary.csv"
+  },
+  "artifacts": {
+    "model_path": "artifacts\\model.joblib",
+    "features_path": "artifacts\\features.json"
+  }
+}

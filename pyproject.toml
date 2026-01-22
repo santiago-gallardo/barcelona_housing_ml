@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "barcelona-housing-ml"
+version = "0.1.0"
+description = "Barcelona housing price prediction (2018) — reproducible ML pipeline + Streamlit app"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Your Name" }]
+license = { text = "MIT" }
+
+# NOTE:
+# You said you want to keep requirements.txt as the source of dependencies.
+# So we DON'T duplicate dependencies here.
+# Install deps with: pip install -r requirements.txt
+# Then install the package (editable) with: pip install -e .
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

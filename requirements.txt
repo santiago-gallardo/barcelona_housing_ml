@@ -1,0 +1,19 @@
+# Barcelona Housing ML — pinned runtime dependencies
+# Tested on: Python 3.13.x (Windows)
+
+# Core
+numpy==2.4.0
+pandas==2.3.3
+scikit-learn==1.7.0
+scipy==1.15.3
+joblib==1.5.3
+threadpoolctl==3.6.0
+
+# App / viz
+streamlit==1.53.1
+pydeck==0.9.1
+matplotlib==3.10.8
+
+# (Optional) Notebooks
+ipykernel>=6.29
+jupyterlab>=4.0
