@@ -72,7 +72,7 @@ barcelona_housing_ml/
 
 ---
 
-## 3) Notebooks overview (explanatory, not code-heavy)
+## 3) Notebooks overview 
 
 - `01_eda.ipynb` Exploratory analysis to understand distributions, missingness, outliers, and the relationship between core drivers (e.g., constructed area, location) and price.
 - **`00_story_modeling.ipynb`**
@@ -284,7 +284,7 @@ streamlit run app/Readme.py
 
 ---
 
-## 9) What I’d do next (optional, senior-thinking)
+## 9) What I’d do next 
 
 These are **production-oriented extensions**, not missing pieces of this project:
 
