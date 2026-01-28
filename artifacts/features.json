@@ -1,0 +1,10 @@
+{
+  "model_name": "RandomForest (5 vars) + log(y)",
+  "features": [
+    "CONSTRUCTEDAREA",
+    "LATITUDE",
+    "LONGITUDE",
+    "DISTANCE_TO_CITY_CENTER",
+    "DISTANCE_TO_DIAGONAL"
+  ]
+}
