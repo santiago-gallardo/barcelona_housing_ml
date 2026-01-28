@@ -6,12 +6,15 @@ import pydeck as pdk
 import streamlit as st
 
 # ------------------------ Make src/ importable (BEFORE importing app_utils) ------------------------
-PROJECT_ROOT = Path("..").resolve()
+PROJECT_ROOT = Path(__file__).resolve()
+while PROJECT_ROOT != PROJECT_ROOT.parent and not (PROJECT_ROOT / "src").exists():
+    PROJECT_ROOT = PROJECT_ROOT.parent
+
 SRC_PATH = PROJECT_ROOT / "src"
 if str(SRC_PATH) not in sys.path:
     sys.path.insert(0, str(SRC_PATH))
 
-from app_utils.prediction_utils import (
+from app_utils.prediction_utils import (    
     FEATURE_UI_CONFIG,
     normalize_name,
     key_for,
